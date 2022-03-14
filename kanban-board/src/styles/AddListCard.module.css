@@ -1,0 +1,36 @@
+.container {
+  background-color: #eaecf0;
+  height: fit-content;
+  padding: 0.2rem;
+  border-radius: 2px;
+}
+
+.input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.input:focus {
+  outline: #71b0d6 solid 2px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button_container {
+  display: flex;
+  margin-top: 5px;
+}
+
+.button {
+  background-color: #037abf;
+  padding: 0.4rem;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+}
