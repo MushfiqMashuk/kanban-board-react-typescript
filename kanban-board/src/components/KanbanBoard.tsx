@@ -18,8 +18,9 @@ const KanbanBoard: React.FC = (): JSX.Element => {
     <div className={styles.container}>
       {<ListCard />}
       {<ListCard />}
+
       {addList ? (
-        <AddListCard cardState={addList} handleClick={handleClick}/>
+        <AddListCard cardState={addList} handleClick={handleClick} />
       ) : (
         <Button handleClick={handleClick}>+ Add a list</Button>
       )}
