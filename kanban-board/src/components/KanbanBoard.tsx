@@ -11,13 +11,15 @@ const KanbanBoard: React.FC = (): JSX.Element => {
   useEffect(() => {}, []);
 
   const handleClick = () => {
-    setAddList(true);
+    setAddList(!addList);
   };
 
   return (
     <div className={styles.container}>
+      {<ListCard />}
+      {<ListCard />}
       {addList ? (
-        <AddListCard />
+        <AddListCard cardState={addList} handleClick={handleClick}/>
       ) : (
         <Button handleClick={handleClick}>+ Add a list</Button>
       )}
