@@ -1,4 +1,4 @@
-import { ADD_TITLE } from "./ActionTypes";
+import { ADD_TITLE, ADD_TODO } from "./ActionTypes";
 import { ActionType, StateProps } from "./Interfaces";
 
 export const CardReducer = (
@@ -7,7 +7,15 @@ export const CardReducer = (
 ): StateProps => {
   switch (action.type) {
     case ADD_TITLE:
-      return { ...state, titles: [...state.titles, action.payload] };
+      return {
+        ...state,
+        titles: [...state.titles, action.payload],
+      };
+    case ADD_TODO:
+      return {
+        ...state,
+        todos: [...state.todos, action.payload],
+      };
 
     default:
       return state;

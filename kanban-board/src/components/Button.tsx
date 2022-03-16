@@ -7,7 +7,7 @@ interface Props {
   style?: object;
 }
 
-const Button = ({ children, handleClick, style }: Props): JSX.Element => {
+const Button = ({ children, handleClick, style }: Props) => {
   return (
     <button className={styles.button} onClick={handleClick} style={style}>
       {children}

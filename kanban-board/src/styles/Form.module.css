@@ -1,0 +1,19 @@
+.button_container {
+  display: flex;
+  margin-top: 5px;
+}
+
+.button {
+  background-color: #037abf;
+  padding: 0.4rem;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close {
+  font-size: 18px;
+  cursor: pointer;
+}

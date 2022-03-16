@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { CardContext } from "../context/CardContext";
 import styles from "../styles/KanbanBoard.module.css";
 import AddListCard from "./AddListCard";
 import Button from "./Button";
@@ -6,9 +7,9 @@ import ListCard from "./ListCard";
 
 const KanbanBoard: React.FC = (): JSX.Element => {
   const [addList, setAddList] = useState<boolean>(false);
-  //const [totalList, setTotalList] = useState<number>();
 
-  useEffect(() => {}, []);
+  const stateObj = CardContext();
+  const state = stateObj?.state;
 
   const handleClick = () => {
     setAddList(!addList);
@@ -16,9 +17,9 @@ const KanbanBoard: React.FC = (): JSX.Element => {
 
   return (
     <div className={styles.container}>
-      {<ListCard />}
-      {<ListCard />}
-
+      {state?.titles.map((card, index) => (
+        <ListCard key={index} card={card} />
+      ))}
       {addList ? (
         <AddListCard cardState={addList} handleClick={handleClick} />
       ) : (
