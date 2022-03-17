@@ -3,9 +3,9 @@
   border: 1px solid white;
   background-color: #eaecf0;
   margin-left: 0.5rem;
-  padding: 0.3rem;
-  border-radius: 2px;
-  width: 250px;
+  padding: 0.4rem;
+  border-radius: 3px;
+  width: 280px;
 }
 
 .card_header {
@@ -14,6 +14,10 @@
   padding: 10px;
   justify-content: space-between;
   overflow: hidden;
+}
+
+.card_header:hover > .delete_logo {
+  opacity: 1;
 }
 
 .card_header > h3 {
@@ -61,11 +65,7 @@
 }
 
 .delete_logo {
-  width: 30px;
+  width: 10%;
   cursor: pointer;
   opacity: 0;
-}
-
-.delete_logo:hover {
-  opacity: 1;
 }

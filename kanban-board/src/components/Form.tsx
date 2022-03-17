@@ -12,13 +12,16 @@ interface FormProps {
 const Form = ({ handleClick, titleId }: FormProps) => {
   const [value, setValue] = useState<string>("");
   const stateObj = CardContext();
-  const state = stateObj?.state;
+
   const dispatch = stateObj?.dispatch;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(AddTodoAction({ title: value, cardId: titleId }));
-    setValue("");
+    if (value.length > 0) {
+      const todoId = Math.floor(Math.random() * Date.now());
+      dispatch(AddTodoAction({ title: value, cardId: titleId, todoId }));
+      setValue("");
+    }
   };
 
   return (

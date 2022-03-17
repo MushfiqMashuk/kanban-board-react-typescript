@@ -1,14 +1,13 @@
 import { ReactNode } from "react";
 
 export interface StateProps {
-  card: boolean;
   titles: object[];
   todos: object[];
 }
 
 export interface ActionType {
   type: string;
-  payload: object;
+  payload: object | number;
 }
 
 export interface ValueType {

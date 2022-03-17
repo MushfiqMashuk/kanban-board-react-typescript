@@ -3,7 +3,6 @@ import { PropType, StateProps, ValueType } from "./Interfaces";
 import { CardReducer } from "./Reducers";
 
 const initialState: StateProps = {
-  card: false,
   titles: [],
   todos: [],
 };

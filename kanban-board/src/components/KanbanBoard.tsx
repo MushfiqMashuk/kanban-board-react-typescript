@@ -17,9 +17,10 @@ const KanbanBoard: React.FC = (): JSX.Element => {
 
   return (
     <div className={styles.container}>
-      {state?.titles.map((card, index) => (
-        <ListCard key={index} card={card} />
-      ))}
+      {state?.titles.length > 0 &&
+        state?.titles.map((card, index) => (
+          <ListCard key={index} card={card} />
+        ))}
       {addList ? (
         <AddListCard cardState={addList} handleClick={handleClick} />
       ) : (
