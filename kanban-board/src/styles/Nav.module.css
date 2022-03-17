@@ -1,8 +1,13 @@
 .container {
   width: 100vw;
-  background-color: rgb(255, 0, 0);
-  height: 5vh;
+  background-color: #037ABF;
+  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: antiquewhite;
+  letter-spacing: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
